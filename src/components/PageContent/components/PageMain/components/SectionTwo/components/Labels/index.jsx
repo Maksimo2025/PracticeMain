@@ -22,6 +22,7 @@ const styles = {
     borderRadius: "50%",
     background: "white",
     marginLeft: "5px",
+    color: "red",
   },
 };
 
