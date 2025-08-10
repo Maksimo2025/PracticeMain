@@ -3,9 +3,9 @@ import React from "react";
 const styles = {
   root: {
     color: "black",
-    border: "1px solid black",
+    border: "2px solid black",
     borderRadius: "10%",
-    background: "teal",
+    background: "red",
     width: "80px",
   },
   active: {
