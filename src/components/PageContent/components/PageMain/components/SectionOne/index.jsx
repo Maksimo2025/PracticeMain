@@ -8,7 +8,6 @@ const SectionOne = () => {
     <SectionWrapper title="sectionOne">
       <h2> Методы массива</h2>
       <ul>
-        {/* <LiSection named={info[0].text} /> */}
         {info.map((inf) => {
           return <LiSection key={inf.text} {...inf} />;
         })}
