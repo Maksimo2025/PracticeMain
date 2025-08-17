@@ -3,14 +3,6 @@ import Comments from "./components/Comments";
 import Container from "./components/Container";
 import AddComment from "./components/AddComment";
 
-const styles = {
-  p: {
-    fontSize: "20px",
-    marginTop: "20px",
-    marginLeft: "100px",
-  },
-};
-
 const PageComments = () => {
   const [comments, setComments] = useState([
     { id: 1, title: "Изучение React: Начните с основ JavaScript" },
@@ -25,16 +17,6 @@ const PageComments = () => {
     );
   };
 
-  // const newComments = (title) => {
-  //   setComments(
-  //     comments.concat([
-  //       {
-  //         id: Date.now(),
-  //         title,
-  //       },
-  //     ])
-  //   );
-  // };
   const newComments = (title) => {
     setComments((prev) => {
       return [...prev, { id: Date.now(), title }];
@@ -44,11 +26,7 @@ const PageComments = () => {
   return (
     <div>
       <Container title="Only for comments">
-        {comments.length !== 0 ? (
-          <Comments comments={comments} remove={removeComments} />
-        ) : (
-          <p style={styles.p}> Без комментарий </p>
-        )}
+        <Comments comments={comments} remove={removeComments} />
       </Container>
       <AddComment onCreate={newComments} />
     </div>

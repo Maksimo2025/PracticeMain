@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../../../../../shared/Button";
 
 const styles = {
   w: {
@@ -16,24 +17,24 @@ const styles = {
 const AddComment = ({ onCreate }) => {
   const [value, setValue] = useState("");
 
-  const submitHandler = (event) => {
-    event.preventDefault();
+  const submitHandler = () => {
+    if (!value.length) return;
 
-    // if (value.trim()) {
     onCreate(value.trim());
     setValue("");
-    // }
   };
 
   return (
-    <form onSubmit={submitHandler} style={styles.div}>
+    <div style={styles.div}>
       <textarea
         value={value}
         onChange={(event) => setValue(event.target.value)}
         style={styles.w}
       />
-      <button type="submit"> Add comments </button>
-    </form>
+      <Button onClick={submitHandler} type="submit">
+        add comments
+      </Button>
+    </div>
   );
 };
 export default AddComment;
