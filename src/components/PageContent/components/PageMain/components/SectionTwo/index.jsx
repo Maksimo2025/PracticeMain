@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SectionWrapper from "../SectionWrapper";
 import ImageList from "./components/ImageList";
 import Column from "./components/Column";
-import Labels from "./components/Labels";
+// import Labels from "./components/Labels";
 import predator from "../../../../../../assets/predator.jpg";
 
 const styles = {
@@ -36,7 +36,7 @@ const SectionTwo = () => {
         <div style={styles.empty}> Nothing </div>
       )}
 
-      <Labels />
+      {/* <Labels /> */}
     </SectionWrapper>
   );
 };
